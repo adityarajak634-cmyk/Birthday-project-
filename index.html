@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Happy Birthday Motkiii ❤️</title>
+
+<!-- FONT -->
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+<style>
+/* HEADING DESIGN */
+h1 {
+  font-size: 2em;
+  letter-spacing: 2px;
+  text-shadow: 0 0 10px rgba(255,255,255,0.6),
+               0 0 20px rgba(255,100,150,0.5);
+}
+
+/* SUBHEADING */
+h2 {
+  font-size: 1.5em;
+  font-weight: normal;
+  opacity: 0.9;
+}
+
+/* PARAGRAPH */
+p {
+  font-size: 1.0em;
+  max-width: 600px;
+  margin: auto;
+  line-height: 1.6;
+}
+
+/* HIGHLIGHT TEXT */
+.highlight {
+  color: #fff;
+  background: rgba(255, 75, 92, 0.5);
+  padding: 4px 10px;
+  border-radius: 10px;
+}
+
+/* GRADIENT TEXT */
+.gradient-text {
+  background: linear-gradient(45deg, #ff4b5c, #ff9a9e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+body {
+  margin: 0;
+  font-family: 'Pacifico', cursive;
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+  color: black;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+.section {
+  padding: 60px 20px;
+  animation: fadeIn 3s ease;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(20px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+button {
+  padding: 12px 25px;
+  border: none;
+  background: white;
+  color: #ff4b5c;
+  font-size: 16px;
+  border-radius: 25px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+button:hover {
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+
+#hearts {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+.music-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;   /* right side pe */
+  
+  background: white;
+  color: #ff4b5c;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  
+  z-index: 999;  /* sabke upar rahe */
+}
+</style>
+</head>
+
+<body>
+  <button onclick="document.getElementById('music').play()">
+click me
+</button>
+  <button class="music-btn" onclick="playMusic()">🎶</button>
+  <button class="music-btn" onclick="playMusic()">🎶</button>
+
+<audio id="music">
+  <source src="song.mp3" type="audio/mpeg">
+</audio>
+
+<canvas id="hearts"></canvas>
+
+<!-- TYPEWRITER -->
+<div class="section">
+  <h1 id="typing"></h1>
+  <h2 id="line2"></h2>
+</div>
+
+<!-- MEMORY -->
+<div class="section">
+  <p>✨🌷🎂🌷✨</p>
+  <h2>Aaj ke din aap mere liye janm liye mera kismat chamak gya  bht acha lgta hai aapke sath  💕</h2>
+  <p>bhale he 6 mahina kyun na hua h 6 saal se sath reh rhe hai jese lgta hai itne kam time me koi ek dusre ko samajh he nhi pata hai or ham dono itna samajhte hai ek dusre ko ☺️️</p>
+</div>
+
+<!-- REASONS -->
+<div class="section">
+  <h2>Aap bolte hai na aap he kyun ? or bhi to bht ladki hai 💌
+   to iska reason hai 💌</h2>
+  <p>
+    • Aapki cute si smile 😚 <br>
+     • Aapki pyaari baatein 🤭 <br>
+     • Aur sabse zyada… aap 💖<br>
+     • Aur jaise aap hai mrko 
+       waise he pasand hai <br>
+     • Aur apka dil bht acha hai <br>
+     • Aap itna samajhte hai mrko<br>
+     • sabse bda baat to aap sab ladki se bht different hai koi compare he nhi kar skta jaanu apko,apka soch aapka nature sab alag hai isiliye aap mrko bht ache lgte hai🥹🫶🏻💕
+  </p>
+</div>
+
+<!-- SURPRISE -->
+<div class="section">
+  <button onclick="showSurprise()">Click for Surprise 🎁</button>
+</div>
+
+<!-- END -->
+<div class="section">
+  <p>Aap meri zindagi ka sabse khoobsurat hissa hi nahi,  
+balki meri sabse badi khushi hain ❤️
+mera kismat bohot acha hai jo aap mrko mile... Warna aaj ke generation me koi kaha kisi ka itna dhyaan rkhta hai,
+itna samajhta hai.
+   Aapko bhagwan mere liye he banaye the shayad. Itna dukh dekha nhi gya to bhej diye apko mere pass bole rkho iss bak bak karne wala machine ko 🤭😚 ki mera dimag khayenge to theek rhenge ham khush rhenge ☺️ or hai bhi itna sab apka wajah se. Mera to sab se bharosa uth gya tha parr aap hai jo fhir mrko sahi rashta dikhaye😘
+     bhale he hamlog ko mile itna bhi time nhi hua par jitna bhi hua h jese lgta hain kitne salon se ham ek dusre ko jante hain itna kam time me itna comfortable hogye.
+     Ab ham likhte he reh jayenge lekin sabd khatam nhi hoga😅, ky kre aap hai he itne ache </p>
+  <h2>Thank you for coming into my life ❤️</h2>
+  <p>Aapke bina sab adhura sa lagta hai 💖</p>
+</div>
+
+<!-- MUSIC -->
+<audio id="music">
+  <source src="song.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+// TYPEWRITER
+let text = "Happy Birthday Motkiii ❤🥳";
+let i = 0;
+
+function typeWriter() {
+  if (i < text.length) {
+    document.getElementById("typing").innerHTML += text.charAt(i);
+    i++;
+    setTimeout(typeWriter, 80);
+  } else {
+    document.getElementById("line2").innerHTML = "Aap meri sabse special ho 💖";
+  }
+}
+
+window.onload = function() {
+  typeWriter();
+};
+
+// SURPRISE
+function showSurprise() {
+  document.getElementById("music").play();
+  alert("Happy birthday meri suarrr 🤭💖❤️");
+}
+
+// HEART ANIMATION
+const canvas = document.getElementById("hearts");
+const ctx = canvas.getContext("2d");
+
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+let hearts = [];
+
+for (let i = 0; i < 50; i++) {
+  hearts.push({
+    x: Math.random() * canvas.width,
+    y: Math.random() * canvas.height,
+    size: Math.random() * 5 + 2,
+    speed: Math.random() * 1 + 0.5
+  });
+}
+
+function drawHearts() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+  hearts.forEach(h => {
+    ctx.fillStyle = "pink";
+    ctx.beginPath();
+    ctx.arc(h.x, h.y, h.size, 0, Math.PI * 2);
+    ctx.fill();
+
+    h.y -= h.speed;
+
+    if (h.y < 0) {
+      h.y = canvas.height;
+      h.x = Math.random() * canvas.width;
+    }
+  });
+
+  requestAnimationFrame(drawHearts);
+}
+
+drawHearts();
+</script>
+<script>
+let animationRunning = false;
+
+// MAIN FUNCTION
+function startExperience() {
+  document.getElementById("music").play();
+  animationRunning = true;
+  animateHearts();
+}
+
+// HEART ANIMATION
+const canvas = document.getElementById("hearts");
+const ctx = canvas.getContext("2d");
+
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+let hearts = [];
+
+for (let i = 0; i < 50; i++) {
+  hearts.push({
+    x: Math.random() * canvas.width,
+    y: canvas.height + Math.random() * 200,
+    size: Math.random() * 5 + 2,
+    speed: Math.random() * 2 + 1
+  });
+}
+
+function animateHearts() {
+  if (!animationRunning) return;
+
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+  hearts.forEach(h => {
+    ctx.fillStyle = "pink";
+    ctx.beginPath();
+    ctx.arc(h.x, h.y, h.size, 0, Math.PI * 2);
+    ctx.fill();
+
+    h.y -= h.speed;
+
+    if (h.y < 0) {
+      h.y = canvas.height;
+      h.x = Math.random() * canvas.width;
+    }
+  });
+
+  requestAnimationFrame(animateHearts);
+}
+</script>
+<script>
+function playMusic() {
+  let music = document.getElementById("music");
+  music.play();
+}
+</script>
+<script>
+function playMusic() {
+  let music = document.getElementById("music");
+  music.play().catch(() => {
+    alert("Tap again to play music 🎶");
+  });
+}
+</script>
+<script>
+function playMusic() {
+  let music = document.getElementById("music");
+  music.volume = 1;
+  music.play();
+}
+</script>
+<script>
+function playMusic() {
+  let music = document.getElementById("music");
+  music.play().then(() => {
+    console.log("Music started ✅");
+  }).catch((e) => {
+    alert("Tap again to play music 🎶");
+    console.log(e);
+  });
+}
+</script>
+</body>
+  </html>
